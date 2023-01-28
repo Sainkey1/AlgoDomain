@@ -46,7 +46,7 @@ public class ProductDetailsServiceImpl implements ProductDetailsService {
 			
 			BigDecimal gst = (productPrice.multiply(gstPercentage)).divide(new BigDecimal(100));
 			
-			BigDecimal finalPrice = (((productPrice.add(gst)).add(deliveryCharge)).subtract(discountPercentage));
+			BigDecimal finalPrice = (((productPrice.add(gst)).add(deliveryCharge)).subtract(dicountOnProduct));
 			
 			charge.setGst(gst);
 			charge.setDelivery(deliveryCharge);
